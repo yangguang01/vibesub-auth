@@ -21,7 +21,7 @@ export function AuthForm() {
       // 获取 ID 令牌
       const idToken = await user.getIdToken()
       // 调用后端接口设置 session cookie
-      const res = await fetch("http://localhost:8000/api/auth/sessionLogin", {
+      const res = await fetch("https://api.rxaigc.com/api/auth/sessionLogin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

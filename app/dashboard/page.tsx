@@ -32,7 +32,7 @@ export default function DashboardPage() {
       setIsLoadingLimit(true)
       const idToken = await getIdToken()
       
-      const response = await fetch("http://localhost:8000/api/tasks/limit/info", {
+      const response = await fetch("https://api.rxaigc.com/api/tasks/limit/info", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${idToken}`,
@@ -71,7 +71,7 @@ export default function DashboardPage() {
   const handleLogout = async () => {
     try {
       // 调用服务端接口清除 session cookie
-      await fetch("http://localhost:8000/api/auth/sessionLogout", {
+      await fetch("https://api.rxaigc.com/api/auth/sessionLogout", {
         method: "POST",
         credentials: "include"
       })
